@@ -1780,14 +1780,14 @@ def show_cm_roc_curve(y_true, y_pred, y_proba):
         name=f'{model_name}',
         plot_chance_level=True,
         despine=True,
-        color=COLOR_SINGLE_GREY_BASIC,
+        color=COLOR_SINGLE_BASIC,
         ax=ax_2
     )
         
     ax_2.fill_between(
         roc_display.fpr,
         roc_display.tpr,
-        alpha=0.2,
+        alpha=0.4,
         color=COLOR_SINGLE_BASIC
     )
 
@@ -1929,7 +1929,7 @@ show_shap(shap_values, model_name=os_best_model_name)
 # ---
 # **Анализ матрицы ошибок и ROC-кривой**
 # > - Матрица ошибок показала следующие предсказания модели:
-# >    - **TP(256)** - модель верно определила ушедших пользователей.
+# >    - **TP(206)** - модель верно определила ушедших пользователей.
 # >    - **TN(1352)** - модель верно определила активных пользователей
 # >    - **FP(131)** - модель ошиблась: назвала пользователей ушедшими, хотя они активны
 # >    - **FN(69)** - модель ошиблась: назвала пользователей активными, хотя они ушли <br> <br>
@@ -2019,13 +2019,3 @@ show_shap(shap_values, model_name=os_best_model_name)
 # > - В дальнейшем можно добавить новые признаки, которые будут показывать:
 #     - вернувшийся ли это пользователь 
 #     - причина по которой вернулся (например: акция, промокод, скидка, новый тариф и т.д)
-
-# In[ ]:
-
-
-get_ipython().system('pip3 install pipreqs -q')
-get_ipython().system('pipreqs . --print')
-get_ipython().system('jupyter nbconvert --to python *.ipynb')
-get_ipython().system('pipreqs')
-get_ipython().system('pipreqs . --force')
-
