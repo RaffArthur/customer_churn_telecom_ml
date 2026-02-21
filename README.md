@@ -70,36 +70,38 @@
   </tr>
 </table>
 
-###### Описание результатов Confussion Matrix
-- TP(206) - модель верно определила ушедших пользователей
-- TN(1352) - модель верно определила активных пользователей
-- FP(131) - модель ошиблась: назвала пользователей ушедшими, хотя они активны
-- FN(69) - модель ошиблась: назвала пользователей активными, хотя они ушли
+#### Описание результатов Confussion Matrix
+| Показатель         | Описание                                                          | Количество |
+| ------------------ | ----------------------------------------------------------------- | ---------- |
+| **True Positive**  | Модель верно определила ушедших пользователей                     | **206**    |
+| **True Negative**  | Модель верно определила активных пользователей                    | **1352**   |
+| **False Positive** | Модель ошиблась: назвала пользователей ушедшими, хотя они активны | **131**    |
+| **False Negative** | Модель ошиблась: назвала пользователей активными, хотя они ушли   | **69**     |
 
-###### Описание результата ROC-curve
+#### Описание результата ROC-curve
 На ROC-кривой видно, что модель обладает хорошей различительной способностью. Показатель ROC-AUC метрики подтверждает эффективность модели по сравнению со случайным угадыванием (пунктирная линий)
 
 ### SHAP & Permutation Importance анализы
-###### Результаты Permutation Importance (от самого влиятельного признака до менее влиятельного)
-| Feature                           | Value    |
-| --------------------------------- | -------- |
-| num__contract_duration_days       | 0.303379 |
-| cat_ord__connected_services_count | 0.017467 |
-| cat_ord__partner                  | 0.014024 |
-| num__monthly_charges              | 0.011394 |
-| cat_ord__payment_method           | 0.009249 |
-| cat_ord__multiple_lines           | 0.008181 |
+#### Результаты Permutation Importance (от самого влиятельного признака до менее влиятельного)
+| Признак                           | Вклад  |
+| --------------------------------- | ------ |
+| num__contract_duration_days       | 0.3034 |
+| cat_ord__connected_services_count | 0.0175 |
+| cat_ord__partner                  | 0.0140 |
+| num__monthly_charges              | 0.0114 |
+| cat_ord__payment_method           | 0.0092 |
+| cat_ord__multiple_lines           | 0.0081 |
 
-###### Результаты SHAP-анализа
+#### Результаты SHAP-анализа
 <table align="center">
   <tr>
-    <td><img width="900" src="https://github.com/user-attachments/assets/802ee4c9-c381-44fb-80e4-a968a0059eda" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/802ee4c9-c381-44fb-80e4-a968a0059eda" /></td>
   </tr>
   <tr>
-    <td><img width="900" src="https://github.com/user-attachments/assets/78c78186-dd20-4e29-b13a-fd332f55fafe" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/78c78186-dd20-4e29-b13a-fd332f55fafe" /></td>
   </tr>
   <tr>
-    <td><img width="900" src="https://github.com/user-attachments/assets/7d3ba3bc-ac73-4dac-a6d6-bca6fc68cc53" /></td>
+    <td><img width="100%" src="https://github.com/user-attachments/assets/7d3ba3bc-ac73-4dac-a6d6-bca6fc68cc53" /></td>
   </tr>
 </table>
 
