@@ -1,3 +1,5 @@
+<img width="1920" height="600" alt="customer-churn-telecom-ml" src="https://github.com/user-attachments/assets/ac762c13-c432-4d8a-a1e8-409b62b62827" />
+
 ***
 [![Jupyter](https://img.shields.io/badge/Jupyter_Notebook-FF6B35?logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Python](https://img.shields.io/badge/Python_3.9+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
